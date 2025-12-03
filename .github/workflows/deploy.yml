@@ -1,0 +1,124 @@
+name: Deploy to Cloud Run
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+
+env:
+  SERVICE_NAME: venon-dashboard-backend
+  REGION: europe-west1
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run type checking
+        run: npm run typecheck
+
+      - name: Build application
+        run: npm run build
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build-and-test
+    environment: ${{ github.ref == 'refs/heads/main' && 'production' || 'staging' }}
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set environment based on branch
+        run: |
+          if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
+            echo "PROJECT_ID=venon-463607" >> $GITHUB_ENV
+            echo "ENVIRONMENT=production" >> $GITHUB_ENV
+          elif [[ "${{ github.ref }}" == "refs/heads/dev" ]]; then
+            echo "PROJECT_ID=venon-staging-463604" >> $GITHUB_ENV
+            echo "ENVIRONMENT=staging" >> $GITHUB_ENV
+          fi
+
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v1
+        with:
+          credentials_json: ${{ github.ref == 'refs/heads/main' && secrets.GCP_SA_KEY_PRODUCTION || secrets.GCP_SA_KEY_STAGING }}
+
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v2
+
+      - name: Configure Docker for Artifact Registry
+        run: |
+          gcloud auth configure-docker ${{ env.REGION }}-docker.pkg.dev
+
+      - name: Build Docker image
+        run: |
+          docker build -t ${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/cloud-run-source-deploy/${{ env.SERVICE_NAME }}:${{ github.sha }} .
+
+      - name: Push Docker image
+        run: |
+          docker push ${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/cloud-run-source-deploy/${{ env.SERVICE_NAME }}:${{ github.sha }}
+
+      - name: Deploy to Cloud Run
+        run: |
+          gcloud run deploy ${{ env.SERVICE_NAME }} \
+            --image=${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/cloud-run-source-deploy/${{ env.SERVICE_NAME }}:${{ github.sha }} \
+            --region=${{ env.REGION }} \
+            --platform=managed \
+            --allow-unauthenticated \
+            --project=${{ env.PROJECT_ID }} \
+            --memory=${{ github.ref == 'refs/heads/main' && '512Mi' || '256Mi' }} \
+            --min-instances=${{ github.ref == 'refs/heads/main' && '1' || '0' }} \
+            --set-env-vars="NODE_ENV=${{ env.ENVIRONMENT }}" \
+            --set-env-vars="CLICKHOUSE_HOST=${{ vars.CLICKHOUSE_HOST }}" \
+            --set-env-vars="CLICKHOUSE_PORT=${{ vars.CLICKHOUSE_PORT }}" \
+            --set-env-vars="CLICKHOUSE_USERNAME=${{ vars.CLICKHOUSE_USERNAME }}" \
+            --set-env-vars="CLICKHOUSE_PASSWORD=${{ vars.CLICKHOUSE_PASSWORD }}" \
+            --set-env-vars="CLICKHOUSE_DATABASE=${{ vars.CLICKHOUSE_DATABASE }}" \
+            --set-env-vars="SUPABASE_URL=${{ vars.SUPABASE_URL }}" \
+            --set-env-vars="SUPABASE_ANON_KEY=${{ vars.NEXT_PUBLIC_SUPABASE_ANON_KEY }}" \
+            --set-env-vars="SUPABASE_SERVICE_ROLE_KEY=${{ vars.SUPABASE_SERVICE_ROLE_KEY }}" \
+            --set-env-vars="GOOGLE_OAUTH_CLIENT_ID=${{ vars.GOOGLE_OAUTH_CLIENT_ID }}" \
+            --set-env-vars="GOOGLE_OAUTH_CLIENT_SECRET=${{ vars.GOOGLE_OAUTH_CLIENT_SECRET }}" \
+            --set-env-vars="GOOGLE_DEVELOPER_ACCOUNT=${{ vars.GOOGLE_DEVELOPER_ACCOUNT }}" \
+
+      - name: Get Service URL
+        run: |
+          SERVICE_URL=$(gcloud run services describe ${{ env.SERVICE_NAME }} --region=${{ env.REGION }} --project=${{ env.PROJECT_ID }} --format='value(status.url)')
+          echo "Service deployed to: $SERVICE_URL"
+
+  trigger-e2e:
+    needs: deploy
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/dev'
+    permissions:
+      contents: read
+      actions: write
+
+    steps:
+      - name: Trigger E2E Tests
+        run: |
+          curl -X POST \
+            -H "Authorization: Bearer ${{ secrets.PAT_E2E_TRIGGER }}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            https://api.github.com/repos/Venon-io-organisation/venon-e2e-testing/dispatches \
+            -d '{
+              "event_type": "run-e2e-tests",
+              "client_payload": {
+                "service": "venon-dashboard-backend"
+              }
+            }'

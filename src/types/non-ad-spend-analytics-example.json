@@ -1,0 +1,46 @@
+{
+  "success": true,
+  "result": {
+    "data": [
+      {
+        "channel": "organic",
+        "campaign": "brand",
+        "attributed_orders": 45.5,
+        "attributed_revenue": 4567.89,
+        "distinct_orders_touched": 50,
+        "attributed_cogs": 1234.56,
+        "attributed_payment_fees": 123.45,
+        "attributed_tax": 456.78,
+        "gross_revenue": 4111.11,
+        "net_profit": 2753.10,
+        "profit_margin_pct": 60.25,
+        "avg_order_value": 100.39,
+        "revenue_per_order_touched": 91.36
+      },
+      {
+        "channel": "organic",
+        "campaign": null,
+        "attributed_orders": 12.3,
+        "attributed_revenue": 987.65,
+        "distinct_orders_touched": 15,
+        "attributed_cogs": 345.67,
+        "attributed_payment_fees": 34.56,
+        "attributed_tax": 98.76,
+        "gross_revenue": 888.89,
+        "net_profit": 508.66,
+        "profit_margin_pct": 51.50,
+        "avg_order_value": 80.30,
+        "revenue_per_order_touched": 65.84
+      }
+    ],
+    "metadata": {
+      "shop_name": "gaming-klamotten",
+      "channel": "organic",
+      "start_date": "2025-06-01",
+      "end_date": "2025-06-30",
+      "attribution_model": "last_click",
+      "attribution_window": "28_day",
+      "query_timestamp": "2025-07-26T12:00:00.000Z"
+    }
+  }
+}

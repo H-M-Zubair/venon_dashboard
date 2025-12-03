@@ -1,0 +1,524 @@
+{
+  "success": true,
+  "result": {
+    "data": {
+      "cohorts": [
+        {
+          "cohort": "2025-08-25",
+          "cohort_size": 4,
+          "cohort_ad_spend": 32.83128820000002,
+          "cac_per_customer": 8.21,
+          "periods": [
+            {
+              "period": 0,
+              "metrics": {
+                "incremental": {
+                  "active_customers": 4,
+                  "active_customers_percentage": 100,
+                  "orders": 4,
+                  "net_revenue": 138.64,
+                  "contribution_margin_one": 73.63999999999999,
+                  "contribution_margin_three": 40.80871179999997,
+                  "average_order_value": 36.65
+                },
+                "cumulative": {
+                  "active_customers": 4,
+                  "active_customers_percentage": 100,
+                  "orders": 4,
+                  "net_revenue": 138.64,
+                  "contribution_margin_one": 73.63999999999999,
+                  "contribution_margin_three": 40.80871179999997,
+                  "average_order_value": 36.65,
+                  "ltv_to_date": 36.65,
+                  "net_ltv_to_date": 34.66,
+                  "ltv_to_cac_ratio": 4.46,
+                  "net_ltv_to_cac_ratio": 4.22,
+                  "is_payback_achieved": true,
+                  "cumulative_contribution_margin_three_per_customer": 10.202177949999992
+                }
+              }
+            }
+          ]
+        },
+        {
+          "cohort": "2025-08-18",
+          "cohort_size": 25,
+          "cohort_ad_spend": 293.7303896999999,
+          "cac_per_customer": 11.75,
+          "periods": [
+            {
+              "period": 0,
+              "metrics": {
+                "incremental": {
+                  "active_customers": 25,
+                  "active_customers_percentage": 100,
+                  "orders": 25,
+                  "net_revenue": 932.01,
+                  "contribution_margin_one": 436.40999999999997,
+                  "contribution_margin_three": 142.6796103000001,
+                  "average_order_value": 41.41359999999999
+                },
+                "cumulative": {
+                  "active_customers": 25,
+                  "active_customers_percentage": 100,
+                  "orders": 25,
+                  "net_revenue": 932.01,
+                  "contribution_margin_one": 436.40999999999997,
+                  "contribution_margin_three": 142.6796103000001,
+                  "average_order_value": 41.41359999999999,
+                  "ltv_to_date": 41.41359999999999,
+                  "net_ltv_to_date": 37.2804,
+                  "ltv_to_cac_ratio": 3.52,
+                  "net_ltv_to_cac_ratio": 3.17,
+                  "is_payback_achieved": true,
+                  "cumulative_contribution_margin_three_per_customer": 5.707184412000004
+                }
+              }
+            }
+          ]
+        },
+        {
+          "cohort": "2025-08-11",
+          "cohort_size": 19,
+          "cohort_ad_spend": 166.92036430000005,
+          "cac_per_customer": 8.79,
+          "periods": [
+            {
+              "period": 0,
+              "metrics": {
+                "incremental": {
+                  "active_customers": 19,
+                  "active_customers_percentage": 100,
+                  "orders": 19,
+                  "net_revenue": 686.2999999999998,
+                  "contribution_margin_one": 311.49999999999983,
+                  "contribution_margin_three": 144.57963569999978,
+                  "average_order_value": 41.20789473684209
+                },
+                "cumulative": {
+                  "active_customers": 19,
+                  "active_customers_percentage": 100,
+                  "orders": 19,
+                  "net_revenue": 686.2999999999998,
+                  "contribution_margin_one": 311.49999999999983,
+                  "contribution_margin_three": 144.57963569999978,
+                  "average_order_value": 41.20789473684209,
+                  "ltv_to_date": 41.20789473684209,
+                  "net_ltv_to_date": 36.12105263157894,
+                  "ltv_to_cac_ratio": 4.69,
+                  "net_ltv_to_cac_ratio": 4.11,
+                  "is_payback_achieved": true,
+                  "cumulative_contribution_margin_three_per_customer": 7.609454510526304
+                }
+              }
+            }
+          ]
+        },
+        {
+          "cohort": "2025-08-04",
+          "cohort_size": 47,
+          "cohort_ad_spend": 852.3580221999999,
+          "cac_per_customer": 18.14,
+          "periods": [
+            {
+              "period": 0,
+              "metrics": {
+                "incremental": {
+                  "active_customers": 47,
+                  "active_customers_percentage": 100,
+                  "orders": 47,
+                  "net_revenue": 1583.9799999999996,
+                  "contribution_margin_one": 740.7799999999995,
+                  "contribution_margin_three": -111.57802220000042,
+                  "average_order_value": 38.92808510638301
+                },
+                "cumulative": {
+                  "active_customers": 47,
+                  "active_customers_percentage": 100,
+                  "orders": 47,
+                  "net_revenue": 1583.9799999999996,
+                  "contribution_margin_one": 740.7799999999995,
+                  "contribution_margin_three": -111.57802220000042,
+                  "average_order_value": 38.92808510638301,
+                  "ltv_to_date": 38.92808510638301,
+                  "net_ltv_to_date": 33.701702127659566,
+                  "ltv_to_cac_ratio": 2.15,
+                  "net_ltv_to_cac_ratio": 1.86,
+                  "is_payback_achieved": true,
+                  "cumulative_contribution_margin_three_per_customer": -2.3740004723404344
+                }
+              }
+            },
+            {
+              "period": 2,
+              "metrics": {
+                "incremental": {
+                  "active_customers": 1,
+                  "active_customers_percentage": 2.127659574468085,
+                  "orders": 1,
+                  "net_revenue": 26.82,
+                  "contribution_margin_one": 11.82,
+                  "contribution_margin_three": 11.82,
+                  "average_order_value": 31.91
+                },
+                "cumulative": {
+                  "active_customers": 47,
+                  "active_customers_percentage": 2.127659574468085,
+                  "orders": 48,
+                  "net_revenue": 1610.7999999999995,
+                  "contribution_margin_one": 752.5999999999996,
+                  "contribution_margin_three": -99.75802220000043,
+                  "average_order_value": 31.91,
+                  "ltv_to_date": 39.60702127659578,
+                  "net_ltv_to_date": 34.2723404255319,
+                  "ltv_to_cac_ratio": 2.18,
+                  "net_ltv_to_cac_ratio": 1.89,
+                  "is_payback_achieved": true,
+                  "cumulative_contribution_margin_three_per_customer": -2.1225111106383068
+                }
+              }
+            }
+          ]
+        },
+        {
+          "cohort": "2025-07-28",
+          "cohort_size": 51,
+          "cohort_ad_spend": 685.2562089999994,
+          "cac_per_customer": 13.44,
+          "periods": [
+            {
+              "period": 0,
+              "metrics": {
+                "incremental": {
+                  "active_customers": 51,
+                  "active_customers_percentage": 100,
+                  "orders": 52,
+                  "net_revenue": 1904.1700000000003,
+                  "contribution_margin_one": 852.5700000000004,
+                  "contribution_margin_three": 167.31379100000095,
+                  "average_order_value": 43.03096153846153
+                },
+                "cumulative": {
+                  "active_customers": 51,
+                  "active_customers_percentage": 100,
+                  "orders": 52,
+                  "net_revenue": 1904.1700000000003,
+                  "contribution_margin_one": 852.5700000000004,
+                  "contribution_margin_three": 167.31379100000095,
+                  "average_order_value": 43.03096153846153,
+                  "ltv_to_date": 43.874705882352934,
+                  "net_ltv_to_date": 37.33666666666667,
+                  "ltv_to_cac_ratio": 3.26,
+                  "net_ltv_to_cac_ratio": 2.78,
+                  "is_payback_achieved": true,
+                  "cumulative_contribution_margin_three_per_customer": 3.2806625686274695
+                }
+              }
+            },
+            {
+              "period": 1,
+              "metrics": {
+                "incremental": {
+                  "active_customers": 2,
+                  "active_customers_percentage": 3.9215686274509802,
+                  "orders": 2,
+                  "net_revenue": 100.67999999999999,
+                  "contribution_margin_one": 40.67999999999999,
+                  "contribution_margin_three": 40.67999999999999,
+                  "average_order_value": 59.9
+                },
+                "cumulative": {
+                  "active_customers": 51,
+                  "active_customers_percentage": 3.9215686274509802,
+                  "orders": 54,
+                  "net_revenue": 2004.8500000000004,
+                  "contribution_margin_one": 893.2500000000005,
+                  "contribution_margin_three": 207.99379100000095,
+                  "average_order_value": 59.9,
+                  "ltv_to_date": 46.223725490196074,
+                  "net_ltv_to_date": 39.3107843137255,
+                  "ltv_to_cac_ratio": 3.44,
+                  "net_ltv_to_cac_ratio": 2.92,
+                  "is_payback_achieved": true,
+                  "cumulative_contribution_margin_three_per_customer": 4.078309627450999
+                }
+              }
+            },
+            {
+              "period": 3,
+              "metrics": {
+                "incremental": {
+                  "active_customers": 1,
+                  "active_customers_percentage": 1.9607843137254901,
+                  "orders": 1,
+                  "net_revenue": 20.919999999999998,
+                  "contribution_margin_one": 10.919999999999998,
+                  "contribution_margin_three": 10.919999999999998,
+                  "average_order_value": 24.9
+                },
+                "cumulative": {
+                  "active_customers": 51,
+                  "active_customers_percentage": 1.9607843137254901,
+                  "orders": 55,
+                  "net_revenue": 2025.7700000000004,
+                  "contribution_margin_one": 904.1700000000003,
+                  "contribution_margin_three": 218.91379100000094,
+                  "average_order_value": 24.9,
+                  "ltv_to_date": 46.711960784313725,
+                  "net_ltv_to_date": 39.72098039215687,
+                  "ltv_to_cac_ratio": 3.48,
+                  "net_ltv_to_cac_ratio": 2.96,
+                  "is_payback_achieved": true,
+                  "cumulative_contribution_margin_three_per_customer": 4.292427274509822
+                }
+              }
+            }
+          ]
+        },
+        {
+          "cohort": "2025-07-21",
+          "cohort_size": 20,
+          "cohort_ad_spend": 182.48164699999995,
+          "cac_per_customer": 9.12,
+          "periods": [
+            {
+              "period": 0,
+              "metrics": {
+                "incremental": {
+                  "active_customers": 20,
+                  "active_customers_percentage": 100,
+                  "orders": 20,
+                  "net_revenue": 594.78,
+                  "contribution_margin_one": 276.78,
+                  "contribution_margin_three": 94.29835300000002,
+                  "average_order_value": 35.199999999999996
+                },
+                "cumulative": {
+                  "active_customers": 20,
+                  "active_customers_percentage": 100,
+                  "orders": 20,
+                  "net_revenue": 594.78,
+                  "contribution_margin_one": 276.78,
+                  "contribution_margin_three": 94.29835300000002,
+                  "average_order_value": 35.199999999999996,
+                  "ltv_to_date": 35.199999999999996,
+                  "net_ltv_to_date": 29.738999999999997,
+                  "ltv_to_cac_ratio": 3.86,
+                  "net_ltv_to_cac_ratio": 3.26,
+                  "is_payback_achieved": true,
+                  "cumulative_contribution_margin_three_per_customer": 4.714917650000001
+                }
+              }
+            }
+          ]
+        },
+        {
+          "cohort": "2025-07-14",
+          "cohort_size": 19,
+          "cohort_ad_spend": 144.23390300000023,
+          "cac_per_customer": 7.59,
+          "periods": [
+            {
+              "period": 0,
+              "metrics": {
+                "incremental": {
+                  "active_customers": 19,
+                  "active_customers_percentage": 100,
+                  "orders": 20,
+                  "net_revenue": 613.4699999999999,
+                  "contribution_margin_one": 248.06999999999988,
+                  "contribution_margin_three": 103.83609699999965,
+                  "average_order_value": 39.89299999999999
+                },
+                "cumulative": {
+                  "active_customers": 19,
+                  "active_customers_percentage": 100,
+                  "orders": 20,
+                  "net_revenue": 613.4699999999999,
+                  "contribution_margin_one": 248.06999999999988,
+                  "contribution_margin_three": 103.83609699999965,
+                  "average_order_value": 39.89299999999999,
+                  "ltv_to_date": 41.99263157894736,
+                  "net_ltv_to_date": 32.2878947368421,
+                  "ltv_to_cac_ratio": 5.53,
+                  "net_ltv_to_cac_ratio": 4.25,
+                  "is_payback_achieved": true,
+                  "cumulative_contribution_margin_three_per_customer": 5.465057736842087
+                }
+              }
+            },
+            {
+              "period": 1,
+              "metrics": {
+                "incremental": {
+                  "active_customers": 1,
+                  "active_customers_percentage": 5.2631578947368425,
+                  "orders": 1,
+                  "net_revenue": 20.919999999999998,
+                  "contribution_margin_one": 10.919999999999998,
+                  "contribution_margin_three": 10.919999999999998,
+                  "average_order_value": 24.9
+                },
+                "cumulative": {
+                  "active_customers": 19,
+                  "active_customers_percentage": 5.2631578947368425,
+                  "orders": 21,
+                  "net_revenue": 634.3899999999999,
+                  "contribution_margin_one": 258.9899999999999,
+                  "contribution_margin_three": 114.75609699999966,
+                  "average_order_value": 24.9,
+                  "ltv_to_date": 43.30315789473683,
+                  "net_ltv_to_date": 33.38894736842104,
+                  "ltv_to_cac_ratio": 5.71,
+                  "net_ltv_to_cac_ratio": 4.4,
+                  "is_payback_achieved": true,
+                  "cumulative_contribution_margin_three_per_customer": 6.03979457894735
+                }
+              }
+            },
+            {
+              "period": 3,
+              "metrics": {
+                "incremental": {
+                  "active_customers": 1,
+                  "active_customers_percentage": 5.2631578947368425,
+                  "orders": 1,
+                  "net_revenue": 29.33,
+                  "contribution_margin_one": 14.329999999999998,
+                  "contribution_margin_three": 14.329999999999998,
+                  "average_order_value": 34.9
+                },
+                "cumulative": {
+                  "active_customers": 19,
+                  "active_customers_percentage": 5.2631578947368425,
+                  "orders": 22,
+                  "net_revenue": 663.7199999999999,
+                  "contribution_margin_one": 273.3199999999999,
+                  "contribution_margin_three": 129.08609699999965,
+                  "average_order_value": 34.9,
+                  "ltv_to_date": 45.139999999999986,
+                  "net_ltv_to_date": 34.932631578947365,
+                  "ltv_to_cac_ratio": 5.95,
+                  "net_ltv_to_cac_ratio": 4.6,
+                  "is_payback_achieved": true,
+                  "cumulative_contribution_margin_three_per_customer": 6.79400510526314
+                }
+              }
+            }
+          ]
+        },
+        {
+          "cohort": "2025-07-07",
+          "cohort_size": 25,
+          "cohort_ad_spend": 224.40674300000026,
+          "cac_per_customer": 8.98,
+          "periods": [
+            {
+              "period": 0,
+              "metrics": {
+                "incremental": {
+                  "active_customers": 25,
+                  "active_customers_percentage": 100,
+                  "orders": 27,
+                  "net_revenue": 868.8199999999996,
+                  "contribution_margin_one": 407.2199999999996,
+                  "contribution_margin_three": 182.8132569999993,
+                  "average_order_value": 36.655925925925914
+                },
+                "cumulative": {
+                  "active_customers": 25,
+                  "active_customers_percentage": 100,
+                  "orders": 27,
+                  "net_revenue": 868.8199999999996,
+                  "contribution_margin_one": 407.21999999999963,
+                  "contribution_margin_three": 182.8132569999993,
+                  "average_order_value": 36.655925925925914,
+                  "ltv_to_date": 39.588399999999986,
+                  "net_ltv_to_date": 34.752799999999986,
+                  "ltv_to_cac_ratio": 4.41,
+                  "net_ltv_to_cac_ratio": 3.87,
+                  "is_payback_achieved": true,
+                  "cumulative_contribution_margin_three_per_customer": 7.312530279999972
+                }
+              }
+            }
+          ]
+        },
+        {
+          "cohort": "2025-06-30",
+          "cohort_size": 17,
+          "cohort_ad_spend": 318.7052609999999,
+          "cac_per_customer": 18.75,
+          "periods": [
+            {
+              "period": 0,
+              "metrics": {
+                "incremental": {
+                  "active_customers": 17,
+                  "active_customers_percentage": 100,
+                  "orders": 18,
+                  "net_revenue": 684.9499999999999,
+                  "contribution_margin_one": 339.5499999999999,
+                  "contribution_margin_three": 20.844739000000004,
+                  "average_order_value": 40.76277777777777
+                },
+                "cumulative": {
+                  "active_customers": 17,
+                  "active_customers_percentage": 100,
+                  "orders": 18,
+                  "net_revenue": 684.9499999999999,
+                  "contribution_margin_one": 339.54999999999995,
+                  "contribution_margin_three": 20.844739000000004,
+                  "average_order_value": 40.76277777777777,
+                  "ltv_to_date": 43.160588235294114,
+                  "net_ltv_to_date": 40.29117647058823,
+                  "ltv_to_cac_ratio": 2.3,
+                  "net_ltv_to_cac_ratio": 2.15,
+                  "is_payback_achieved": true,
+                  "cumulative_contribution_margin_three_per_customer": 1.226161117647059
+                }
+              }
+            },
+            {
+              "period": 2,
+              "metrics": {
+                "incremental": {
+                  "active_customers": 1,
+                  "active_customers_percentage": 5.882352941176471,
+                  "orders": 2,
+                  "net_revenue": 39.050000000000004,
+                  "contribution_margin_one": 9.050000000000004,
+                  "contribution_margin_three": 9.050000000000004,
+                  "average_order_value": 19.525000000000002
+                },
+                "cumulative": {
+                  "active_customers": 17,
+                  "active_customers_percentage": 5.882352941176471,
+                  "orders": 20,
+                  "net_revenue": 723.9999999999999,
+                  "contribution_margin_one": 348.5999999999999,
+                  "contribution_margin_three": 29.89473900000001,
+                  "average_order_value": 19.525000000000002,
+                  "ltv_to_date": 45.45764705882352,
+                  "net_ltv_to_date": 42.58823529411764,
+                  "ltv_to_cac_ratio": 2.42,
+                  "net_ltv_to_cac_ratio": 2.27,
+                  "is_payback_achieved": true,
+                  "cumulative_contribution_margin_three_per_customer": 1.75851405882353
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "metadata": {
+      "shop_name": "gaming-klamotten",
+      "cohort_type": "week",
+      "start_date": "2025-06-30",
+      "end_date": "2025-09-18",
+      "max_periods": 52,
+      "query_timestamp": "2025-09-18T06:56:52.162Z"
+    }
+  }
+}

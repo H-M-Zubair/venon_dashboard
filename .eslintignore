@@ -1,0 +1,5 @@
+venon/
+venon-backend/
+dist/
+node_modules/
+*.js
